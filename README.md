@@ -1,6 +1,6 @@
 # [Cineplay](https://cineplay.mormani.repl.co/)
 
-Cineplay é um projeto de Portal de Filmes realizado para a matéria **Desenvolvimento de Interfaces Web, ICEI - PUC Minas**, durante o 1º semestre de 2021.
+Cineplay é um projeto de Portal de Filmes desenvolvido para a matéria **Desenvolvimento de Interfaces Web, ICEI - PUC Minas**, durante o 1º semestre de 2021.
 
 Um dos requisitos do projeto era utilizar a *API RESTful* do site [The Movie Database](https://www.themoviedb.org/documentation/api) para conseguir informações sobre filmes atuais ou populares.
 
