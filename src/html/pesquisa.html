@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+        <!-- Font Awesome (Ícones) -->
+        <script src="https://kit.fontawesome.com/f28c1c42ed.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" type="text/css" href="../style.css">
+
+        <script src="../js/config.js"></script>
+        <script src="../index.js"></script>
+        <script src="../js/indexPesq.js"></script>
+
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Cineplay - O Seu Portal de Filmes!</title>
+    </head>
+
+    <body>
+
+        <!-- Modal -->
+        <button class="d-none controlModal"></button>
+        <div class="modal fade" id="exemploModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitulo"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <a id="linkIMDB" target="_blank" href=""><button type="button" class="btn btn-warning">IMDB</button></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Cabeçalho -->
+        <header class="container-lg">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+
+                    <!-- Logo e Menu Mobile -->
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="../index.html">CINE<i class="fas fa-play-circle" id="playLogo"></i></a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks"
+                            aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <!-- Páginas e Pesquisa -->
+                        <div class="collapse navbar-collapse" id="navbarLinks">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="populares.html">Populares</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="cartaz.html">Em Cartaz</a>
+                                </li>
+                            </ul>
+
+                            <form class="d-flex">
+                                <div class="input-group">
+                                    <input class="form-control" id="boxPesq" type="text" name="pesquisa" placeholder="Pesquisar filme..."
+                                        aria-label="Pesquisar filme...">
+                                    <button class="btn btn-outline-dark" type="submit" id="btnPesqusia"><i class="fas fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+        </header>
+
+        <!-- Corpo -->
+        <main class="container">
+
+            <!-- Pesquisa -->
+            <div class="row divTitle">
+                <div class="col-12 text-start">
+                    <p></p>
+                </div>
+            </div>
+            <div class="row" id="pesq">
+
+            </div>
+
+            <!-- Pré-Rodapé -->
+            <section class="row" id="preRodape">
+
+                <!-- Notícias -->
+                <div class="col-12 col-lg-8">
+
+                    <div class="row" id="noticias">
+                        <div class="col-12" id="noticiasArea">
+
+                            <h4>Notícias</h4>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Social e Links -->
+                <div class="col-12 col-lg-4" id="social">
+
+                    <div class="row">
+
+                        <!-- Mapa do Site e Categorias -->
+                        <div class="col-12">
+                            <h4>Mapa do Site</h4>
+                            <div class="list-group" id="mapaSite">
+                                <a href="../index.html" class="list-group-item list-group-item-action">Home</a>
+                                <a href="populares.html" class="list-group-item list-group-item-action">Populares</a>
+                                <a href="cartaz.html" class="list-group-item list-group-item-action">Em Cartaz</a>
+                            </div>
+                        </div>
+
+                        <div class="col-12" id="categorias">
+
+                            <h4>Categorias</h4>
+                            <div class="list-group">
+                                <a target="_blank" href="https://www.themoviedb.org/movie" class="list-group-item list-group-item-action">
+                                    Filmes <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a target="_blank" href="https://www.themoviedb.org/tv" class="list-group-item list-group-item-action">
+                                    Séries <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a target="_blank" href="https://www.themoviedb.org/person" class="list-group-item list-group-item-action">
+                                    Atores e Atrizes <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <!-- Sobre e Social Media -->
+                        <div class="col-12" id="sobre">
+                            <h4>Sobre</h4>
+                            <p>
+                                Cineplay surgiu em 2019 criado por um grupo de amigos no Ensino Médio
+                                que adoravam conversar sobre filmes, séries e cultura pop, sendo
+                                idealizado por Hugo, possuindo dois grandes cinéfilos encabeçando a Redação e
+                                ótimos pesquisadores sempre antenados para repassar as informações para a
+                                Redação. Nos dias atuais, a Cineplay é o maior Portal de Filmes da América
+                                Latina.
+                            </p>
+                        </div>
+
+                        <div class="col-12">
+                            <h4>Editorial</h4>
+                            <p>
+                                <i class="fas fa-user-friends"></i>
+                                <strong> Redação:</strong> Davi Gomes, Marcelo Lommez
+                            </p>
+                            <p>
+                                <i class="fas fa-user-friends"></i>
+                                <strong> Pesquisa:</strong> Victor Filocre, Adriano Ricco
+                            </p>
+                            <p>
+                                <i class="fas fa-user"></i>
+                                <strong> Gerente Geral:</strong> Hugo Cesar
+                            </p>
+                        </div>
+
+                        <div class="col-12" id="socialMedia">
+                            <strong>Redes Sociais:</strong><br>
+                            <a target="_blank" href="https://www.facebook.com/">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                            <a target="_blank" href="https://twitter.com/">
+                                <i class="fab fa-twitter-square"></i>
+                            </a>
+                            <a target="_blank" href="https://www.instagram.com/">
+                                <i class="fab fa-instagram-square"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer class="container-lg bg-warning">
+            <div class="row rodape">
+                <div class="col-12 col-lg-8 text-center text-lg-start">
+                    <p>
+                        &copy; 2021 - Disciplina de Desenvolvimento de Interfaces Web - <strong>ICEI PUC Minas</strong>
+                    </p>
+                </div>
+
+                <div class="col-12 col-lg-4 text-center text-lg-end">
+                    <span class="navbar-brand">CINE<i class="fas fa-play-circle" id="playLogo"></i></span>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+            integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+            integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    </body>
+
+</html>
